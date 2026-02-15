@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <!-- 丢失场景（预设选项，用Spinner下拉框） -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="丢失场景*"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"/>
+        <Spinner
+            android:id="@+id/sp_lost_scene"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#FFFFFF"
+            android:entries="@array/lost_scene_arr"/> <!-- 预设场景数组，后续定义 -->
+
+        <!-- 物品类型（预设选项） -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="物品类型*"
+            android:textSize="16sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"/>
+        <Spinner
+            android:id="@+id/sp_lost_type"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#FFFFFF"
+            android:entries="@array/lost_type_arr"/> <!-- 预设类型数组 -->
+
+        <!-- 物品名称 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="物品名称*"
+            android:textSize="16sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"/>
+        <EditText
+            android:id="@+id/et_lost_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="比如：校园卡、充电宝"
+            android:background="#FFFFFF"
+            android:paddingLeft="15dp"/>
+
+        <!-- 丢失时间 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="丢失时间"
+            android:textSize="16sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"/>
+        <EditText
+            android:id="@+id/et_lost_time"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="比如：2026-02-13 14:30"
+            android:background="#FFFFFF"
+            android:paddingLeft="15dp"/>
+
+        <!-- 核心特征 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="物品特征"
+            android:textSize="16sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"/>
+        <EditText
+            android:id="@+id/et_lost_feature"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:hint="比如：校园卡姓名XXX，充电宝蓝色"
+            android:background="#FFFFFF"
+            android:paddingLeft="15dp"
+            android:gravity="top"/>
+
+        <!-- 联系方式（可选） -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="联系方式*"
+            android:textSize="16sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"/>
+        <EditText
+            android:id="@+id/et_contact"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="微信/QQ/手机号"
+            android:background="#FFFFFF"
+            android:paddingLeft="15dp"/>
+
+        <!-- 是否展示联系方式 -->
+        <CheckBox
+            android:id="@+id/cb_show_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="展示联系方式"
+            android:textSize="14sp"
+            android:layout_marginTop="10dp"/>
+
+        <!-- 发布按钮 -->
+        <Button
+            android:id="@+id/btn_publish"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="发布丢失信息"
+            android:textSize="18sp"
+            android:background="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="30dp"/>
+
+    </LinearLayout>
+</ScrollView>

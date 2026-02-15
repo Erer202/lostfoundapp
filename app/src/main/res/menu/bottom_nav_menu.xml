@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 底部导航：丢 -->
+    <item
+        android:id="@+id/nav_lost"
+        android:icon="@android:drawable/ic_menu_delete"
+        android:title="丢"/>
+    <!-- 底部导航：发布 -->
+    <item
+        android:id="@+id/nav_publish"
+        android:icon="@android:drawable/ic_menu_add"
+        android:title="发布"/>
+    <!-- 底部导航：捡 -->
+    <item
+        android:id="@+id/nav_find"
+        android:icon="@android:drawable/ic_input_delete"
+        android:title="捡"/>
+</menu>

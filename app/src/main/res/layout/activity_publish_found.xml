@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <!-- 拾获场景（复用丢失场景的预设数组） -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="拾获场景*"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"/>
+        <Spinner
+            android:id="@+id/sp_found_scene"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#FFFFFF"
+            android:entries="@array/lost_scene_arr"/> <!-- 复用校园场景数组 -->
+
+        <!-- 物品类型（复用预设数组） -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="物品类型*"
+            android:textSize="16sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"/>
+        <Spinner
+            android:id="@+id/sp_found_type"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#FFFFFF"
+            android:entries="@array/lost_type_arr"/>
+
+        <!-- 物品名称 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="物品名称*"
+            android:textSize="16sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"/>
+        <EditText
+            android:id="@+id/et_found_name"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:hint="比如：校园卡、充电宝"
+            android:background="#FFFFFF"
+            android:paddingLeft="15dp"/>
+
+        <!-- 拾获时间 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="时间"
+            android:textSize="16sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"/>
+        <EditText
+            android:id="@+id/et_found_time"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="比如：2026-02-13 14:30"
+            android:background="#FFFFFF"
+            android:paddingLeft="15dp"/>
+
+        <!-- 核心特征 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="物品特征"
+            android:textSize="16sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"/>
+        <EditText
+            android:id="@+id/et_found_feature"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:hint="比如：校园卡姓名XXX，充电宝蓝色"
+            android:background="#FFFFFF"
+            android:paddingLeft="15dp"
+            android:gravity="top"/>
+
+        <!-- 联系方式（可选） -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="联系方式*"
+            android:textSize="16sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"/>
+        <EditText
+            android:id="@+id/et_contact"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="微信/QQ/手机号"
+            android:background="#FFFFFF"
+            android:paddingLeft="15dp"/>
+
+        <!-- 是否展示联系方式 -->
+        <CheckBox
+            android:id="@+id/cb_show_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="展示联系方式"
+            android:textSize="14sp"
+            android:layout_marginTop="10dp"/>
+
+        <!-- 新增：免打扰选项 -->
+        <CheckBox
+            android:id="@+id/cb_do_not_disturb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:text="开启免打扰（需答对验证问题获取联系方式）"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_verify_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginTop="15dp">
+
+            <!-- 验证问题 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="验证问题（比如：充电宝是什么颜色？）"
+                android:textSize="16sp"
+                android:layout_marginBottom="5dp"/>
+            <EditText
+                android:id="@+id/et_verify_question"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="请输入验证问题"
+                android:background="#FFFFFF"
+                android:paddingLeft="15dp"/>
+
+            <!-- 选项A -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="选项A"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"/>
+            <EditText
+                android:id="@+id/et_option_a"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="比如：蓝色"
+                android:background="#FFFFFF"
+                android:paddingLeft="15dp"/>
+
+            <!-- 选项B -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="选项B"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"/>
+            <EditText
+                android:id="@+id/et_option_b"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="比如：红色"
+                android:background="#FFFFFF"
+                android:paddingLeft="15dp"/>
+
+            <!-- 选项C -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="选项C"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"/>
+            <EditText
+                android:id="@+id/et_option_c"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="比如：黑色"
+                android:background="#FFFFFF"
+                android:paddingLeft="15dp"/>
+
+            <!-- 新增：正确答案选择（单选按钮组） -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="正确答案"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"/>
+            <RadioGroup
+                android:id="@+id/rg_correct_answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#FFFFFF"
+                android:padding="10dp">
+
+                <RadioButton
+                    android:id="@+id/rb_answer_a"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="A"
+                    android:textSize="16sp"
+                    android:gravity="center"/>
+
+                <RadioButton
+                    android:id="@+id/rb_answer_b"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="B"
+                    android:textSize="16sp"
+                    android:gravity="center"/>
+
+                <RadioButton
+                    android:id="@+id/rb_answer_c"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="C"
+                    android:textSize="16sp"
+                    android:gravity="center"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+
+        <!-- 发布按钮 -->
+        <Button
+            android:id="@+id/btn_publish"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="发布拾获信息"
+            android:textSize="18sp"
+            android:background="#FF9800"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="10dp" />
+
+
+    </LinearLayout>
+</ScrollView>

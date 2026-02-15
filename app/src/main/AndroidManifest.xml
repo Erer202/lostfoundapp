@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 网络权限（后续云端同步用） -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 相机权限（拍照用） -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 存储权限（保存/读取照片用） -->
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <!-- 声明需要相机硬件（可选，适配低版本） -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LostFoundApp">
+        <!-- 1. 主入口MainActivity：设为启动页（MAIN/LAUNCHER） -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 2. 登录页面：非启动页，exported设为false（更安全） -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+
+        <!-- 3. 核心首页：非启动页，exported设为false -->
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+
+        <!-- 4. 丢失物品发布页面：非启动页，exported设为false -->
+        <activity
+            android:name=".LostPublishActivity"
+            android:exported="false" />
+
+        <!-- 5. 拾取物品发布页面 -->
+        <activity
+            android:name=".LostPublishActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

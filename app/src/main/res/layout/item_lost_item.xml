@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:padding="15dp"
+    android:layout_marginBottom="10dp">
+
+    <!-- 左侧文字区域（占大部分宽度） -->
+    <LinearLayout
+        android:id="@+id/ll_text_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/iv_item_image"
+        android:orientation="vertical"
+        android:paddingRight="10dp">
+
+        <!-- 类型标签（丢失/拾获） -->
+        <TextView
+            android:id="@+id/tv_type_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="丢失物品"
+            android:textSize="14sp"
+            android:textColor="#FFFFFF"
+            android:background="#2196F3"
+            android:padding="1dp"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- 物品名称 -->
+        <TextView
+            android:id="@+id/tv_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="校园卡"
+            android:textSize="18sp"
+            android:textColor="#333333"
+            android:layout_marginBottom="5dp"/>
+
+        <!-- 场景+用户输入的时间 -->
+        <TextView
+            android:id="@+id/tv_scene_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="图书馆1楼 | 2026-02-14 14:30"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginBottom="5dp"/>
+
+        <!-- 核心特征 -->
+        <TextView
+            android:id="@+id/tv_feature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="姓名：张三，卡号：123456"
+            android:textSize="14sp"
+            android:textColor="#666666"/>
+
+        <!-- 免打扰标签（开启时显示） -->
+        <TextView
+            android:id="@+id/tv_disturb_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="免打扰（需验证）"
+            android:textSize="12sp"
+            android:textColor="#FF9800"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <!-- 右侧图片位置（固定宽高，居中） -->
+    <ImageView
+        android:id="@+id/iv_item_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        android:background="#EEEEEE"
+        android:src="@android:drawable/ic_menu_gallery"
+        android:contentDescription="物品图片"/>
+
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">LostFoundApp</string>
+
+    <string name="login_btn_tip">即将进入账号密码登录页面</string>
+    <string name="visitor_login_success">游客登录成功，即将进入首页</string>
+    <string name="anonymous_publish_tip">即将进入匿名发布失物/拾物页面</string>
+
+
+</resources>

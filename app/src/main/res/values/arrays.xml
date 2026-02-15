@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 丢失场景预设 -->
+    <string-array name="lost_scene_arr">
+        <item>图书馆</item>
+        <item>教学楼</item>
+        <item>食堂</item>
+        <item>综合楼</item>
+        <item>操场</item>
+        <item>风雨操场</item>
+        <item>文体馆</item>
+        <item>宿舍</item>
+    </string-array>
+
+    <!-- 物品类型预设 -->
+    <string-array name="lost_type_arr">
+        <item>身份证件</item>
+        <item>充电宝/耳机</item>
+        <item>水杯</item>
+        <item>雨伞</item>
+        <item>书本</item>
+        <item>书包</item>
+        <item>其他</item>
+    </string-array>
+</resources>
